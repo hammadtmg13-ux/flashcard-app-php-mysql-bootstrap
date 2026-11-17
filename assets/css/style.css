@@ -1,0 +1,143 @@
+/* FlashLearn - Custom Styles */
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border-radius: 0 0 2rem 2rem;
+    padding: 2.5rem 1rem 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(37, 117, 252, 0.3);
+}
+
+.hero h1 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    opacity: 0.9;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.deck-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.deck-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.deck-card .deck-color-bar {
+    height: 6px;
+}
+
+.card-item {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-item.mastered {
+    border-left: 5px solid #198754;
+}
+
+.card-item .answer-text {
+    display: none;
+}
+
+.card-item.show-answer .answer-text {
+    display: block;
+}
+
+/* Flashcard flip */
+.flashcard-scene {
+    perspective: 1200px;
+    min-height: 320px;
+}
+
+.flashcard {
+    width: 100%;
+    min-height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    min-height: 320px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.flashcard-front {
+    background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+}
+
+.flashcard-back {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flashcard .flip-hint {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.progress-thin {
+    height: 8px;
+}
+
+.btn {
+    border-radius: 0.6rem;
+}
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.badge-deck {
+    font-size: 0.8rem;
+}
